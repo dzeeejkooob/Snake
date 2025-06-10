@@ -88,12 +88,14 @@ namespace Snake
                     {
                         slow = new Slow();
                         slow.NewDelayedDraw();
+                        //*= bo time jest 1000/5 wiec na odwrót
                         time *= 1.05;
                     }
                     if (snake.gameOver)
                     {
                         Console.Clear();
-                        Console.WriteLine($"GAME OVER! YOUR SCORE: " + snake.Length);
+                        int result = snake.Length - 1;
+                        Console.WriteLine($"GAME OVER! YOUR SCORE: " + result);
                         esc = true;
                         Console.ReadLine();
                     }
